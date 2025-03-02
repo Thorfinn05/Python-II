@@ -1,0 +1,6 @@
+f = open("file2.txt", "r")
+words = f.read().title()
+f.close()
+f = open("file2.txt", "w")
+f.write(words)
+f.close()
