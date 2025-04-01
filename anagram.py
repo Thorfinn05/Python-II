@@ -11,7 +11,7 @@ for word in words:
     else:
         d[word] = 1
 
-unique = list + (d.keys())
+unique = list(d.keys())
 for i in range(len(unique)):
     for j in range(i+1, len(unique)):
         word1 = unique[i].lower()
