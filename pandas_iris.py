@@ -27,3 +27,4 @@ if 0.2 in iris['PetalWidthCm'].values:
     print('true')
 else:
     print('false')
+iris.to_csv("C:\\Users\\User\\Downloads\\iris_RD.csv")
