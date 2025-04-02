@@ -23,3 +23,7 @@ iris.rename(columns={"sepal.width":'SepalWidthCm', 'petal.width':'PetalWidthCm'}
 print(iris.columns)
 print(iris[1:])
 print(iris[:-1])
+if 0.2 in iris['PetalWidthCm'].values:
+    print('true')
+else:
+    print('false')
