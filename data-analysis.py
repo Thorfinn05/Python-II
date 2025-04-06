@@ -7,3 +7,4 @@ iris = pd.read_csv("C:\\Users\\User\\Downloads\\iris.csv")
 
 print(iris.head())
 print(iris.shape)
+print(iris.columns)
