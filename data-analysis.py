@@ -19,3 +19,5 @@ plt.show()
 #Second Plot
 plt.hist(iris["variety"],color="green")
 plt.show()
+
+print(iris.describe())
