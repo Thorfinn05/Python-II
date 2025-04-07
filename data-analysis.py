@@ -5,24 +5,27 @@ import seaborn as sb
 
 iris = pd.read_csv("C:\\Users\\User\\Downloads\\iris.csv")
 
-# print(iris.head())
-# print(iris.shape)
-# print(iris.columns)
-# print(iris['variety'].value_counts())
-# print(iris.info())
+print(iris.head())
+print(iris.shape)
+print(iris.columns)
+print(iris['variety'].value_counts())
+print(iris.info())
 
-# #First Plot
-# plt.plot(iris['variety'])
-# plt.xlabel("No. of data points")
-# plt.show()
+#First Plot
+plt.plot(iris['variety'])
+plt.xlabel("No. of data points")
+plt.show()
 
-# #Second Plot
-# plt.hist(iris["variety"],color="green")
-# plt.show()
+#Second Plot
+plt.hist(iris["variety"],color="green")
+plt.show()
 
-# print(iris.describe())
+print(iris.describe())
 
 sb.set_style('whitegrid')
 sb.scatterplot(data=iris, x='sepal.length', y='sepal.width', hue='variety')
-plt.plot()
+plt.show()
+
+sb.set_style('whitegrid')
+sb.pairplot(iris, hue='variety', size=3)
 plt.show()
