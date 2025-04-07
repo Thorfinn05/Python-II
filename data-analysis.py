@@ -29,3 +29,6 @@ plt.show()
 sb.set_style('whitegrid')
 sb.pairplot(iris, hue='variety', size=3)
 plt.show()
+
+sb.FacetGrid(iris,hue="variety").map(sb.distplot,'petal.length').add_legend()
+plt.show()
