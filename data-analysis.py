@@ -32,3 +32,31 @@ plt.show()
 
 sb.FacetGrid(iris,hue="variety").map(sb.distplot,'petal.length').add_legend()
 plt.show()
+
+counts,bin_edges=np.histogram(iris_setosa['petal.length'],bins=10,density=True)
+pdf= counts/(sum(counts))
+print(pdf)
+print(bin_edges)
+# to compute cdf
+cdf=np.cumsum(pdf)
+plt.plot(bin_edges[1:],pdf,label='pdf')
+plt.plot(bin_edges[1:],cdf,label='cdf')
+counts,bin_edges=np.histogram(iris.Virginica['petal.length'],bins=10,density=True)
+pdf= counts/(sum(counts))
+print(pdf)
+print(bin_edges)
+# to compute cdf
+cdf=np.cumsum(pdf)
+plt.plot(bin_edges[1:],pdf,label='pdf')
+plt.plot(bin_edges[1:],cdf,label='cdf')
+counts,bin_edges=np.histogram(iris.Versicolor['petal.length'],bins=10,density=True)
+pdf= counts/(sum(counts))
+print(pdf)
+print(bin_edges)
+# to compute cdf
+cdf=np.cumsum(pdf)
+plt.plot(bin_edges[1:],pdf,label='pdf')
+plt.plot(bin_edges[1:],cdf,label='cdf')
+plt.legend()
+plt.show()
+
