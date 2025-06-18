@@ -28,7 +28,7 @@ plt.ylabel('Inertia')
 plt.grid(True)
 plt.show()
 
-kmeans_model = KMeans(n_clusters=3, random_state=1, n_init=10).fit(df)
+kmeans_model = KMeans(n_clusters=4, random_state=1, n_init=10).fit(df)
 labels = kmeans_model.labels_
 clusters_sklearn = kmeans_model.cluster_centers_
 print(labels)

@@ -10,12 +10,12 @@ cwr.writerow([104, 'Irfan', 82, 11])
 f.close()
 
 f = open("students.csv","r")
-crd = csv.reader(f)
-def count_rec(crd):
+crd = csv.DictReader(f)
+def count_rec(reader):
     c = 0
-    for data in crd:
-        if(data['Score'] > '80'):
-            print(data)
+    for row in reader:
+        if int(row['Score']) > 80:
+            print(row)
             c += 1
     return c
 print("Number of records > 80 is: ", count_rec(crd))

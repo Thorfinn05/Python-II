@@ -30,12 +30,12 @@ plt.ylabel('Inertia')
 plt.grid(True)
 plt.show()
 
-# Perform K-means clustering and take cluster centers
-kmeans_model = KMeans(n_clusters=3, random_state=1, n_init=10).fit(df)
-labels = kmeans_model.labels_
-clusters_sklearn = kmeans_model.cluster_centers_
-print(labels)
-print(kmeans_model.cluster_centers_)
+# # Perform K-means clustering and take cluster centers
+# kmeans_model = KMeans(n_clusters=3, random_state=1, n_init=10).fit(df)
+# labels = kmeans_model.labels_
+# clusters_sklearn = kmeans_model.cluster_centers_
+# print(labels)
+# print(kmeans_model.cluster_centers_)
 
 # Function to plot final clusters (choosing two features only, e.g., Maths and Science)
 def plot_clusters_sklearn(data, labels, clusters):
